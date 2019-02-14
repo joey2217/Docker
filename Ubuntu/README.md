@@ -44,6 +44,20 @@
     >use mysql;
     >grant all privileges  on *.* to root@'%' identified by "password";
 
+    Docker Mysql
+    $ docker search mysql (搜索mysql镜像)  
+    $ docker pull mysql （下载mysql镜像，默认最新版本）
+    运行镜像，设置root账号初始密码（123456），映射本地宿主机端口3306到Docker端口3306。
+    $ docker run -it --rm --name mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql
+    进入mysql容器
+    docker exec -it mysql bash  
+    在容器内登陆Mysql
+    mysql -uroot -p123456 或 (mysql -uroot -p ) 
+    ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';  
+    FLUSH PRIVILEGES;  
+
+
+
 ### JDK安装
 
     下载jdk
