@@ -1,5 +1,6 @@
 # NGINX
-### ubuntu nginx
+
+## ubuntu nginx
 
     sudo apt-get install nginx
     安装好的文件位置：
