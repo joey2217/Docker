@@ -6,4 +6,4 @@
   --volume "$PWD/conf":/etc/nginx \
   -p 8080:80 \
   -d \
-  nginx
+  nginx:stable-alpine
