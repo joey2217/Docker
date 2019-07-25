@@ -1,5 +1,6 @@
 # NGINX
-### ubuntu nginx
+
+## ubuntu nginx
 
     sudo apt-get install nginx
     安装好的文件位置：
@@ -11,3 +12,12 @@
 
     当然，如果要更清楚Nginx的配置项放在什么地方，可以打开/etc/nginx/nginx.conf
 
+
+     docker container run \
+      --rm \
+      --name mynginx \
+      --volume "$PWD/html":/usr/share/nginx/html \
+      --volume "$PWD/conf":/etc/nginx \
+      -p 8080:80 \
+      -d \
+      nginx
